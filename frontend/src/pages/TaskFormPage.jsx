@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
-import { createTask, getAllTasks } from "../api/taskApi";
+import { createTask, getAllTasks, deleteTask, updateTask, getTask } from "../api/taskApi";
 import { toast } from "react-hot-toast";
 
 function TaskFormPage() {
@@ -71,7 +71,7 @@ function TaskFormPage() {
                 {errors.description && <span>This field is required</span>}
 
                 <button className="bg-indigo-500 p-3 rounded-lg block w-full mt-3">
-                    Save
+                    {params.id ? "update" : "save"}
                 </button>
             </form>
 
