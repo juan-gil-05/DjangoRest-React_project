@@ -121,4 +121,4 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 # Authorization
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
